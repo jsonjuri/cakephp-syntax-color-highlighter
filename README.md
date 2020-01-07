@@ -1,9 +1,9 @@
-# PHP Syntax Color Plugin
+# CakePHP Syntax Color Plugin
 
 This plugin was originally created for Javascript, Typescript and is created by Elior Boukhobza.
 See: https://github.com/mallowigi/Custom-Syntax-Highlighter
 
-I have modified the plugin for PHP code coloring.
+I have modified the plugin for CakePHP code coloring.
 
 Credits go to Elior Boukhobza, thank you :)
 
@@ -52,13 +52,13 @@ Let's say for instance that I want to highlight differently the "class" keyword 
 
 We're done with the annotator. Here we already have all occurrences of the "class" word annotated with our brand new TextAttributesKey and we can already change their color by modifying the color scheme's `.icls` file. But of course it would be easier to have it in the Color Scheme Settings. Here's how:
 
-1. Open the file `PhpColorSettings.java`
-2. Add a new `TextAttributesKey` like before, but instead of _creating_ a new one, we will reuse the one created in the `PhpAnnotator`.
-3. Add a new `AttributesDescriptor` in the `PHP_ATTRIBUTES` field. This will be the new entry in the Java Color Scheme page.
+1. Open the file `CakePHPColorSettings.java`
+2. Add a new `TextAttributesKey` like before, but instead of _creating_ a new one, we will reuse the one created in the `CakePHPAnnotator`.
+3. Add a new `AttributesDescriptor` in the `CAKE_PHP_ATTRIBUTES` field. This will be the new entry in the Java Color Scheme page.
 4. Optional: Add a new "tag" in the `createAdditionalHlAttrs` method and assign it the `TextAttributesKey`. Here it would be `custom_class` for instance.
 5. Optional: Change the `demoText` and add an example text of your custom keyword, wrapped by the new "tag" you created previously. Here, it would be something like `public <custom_class>class</custom_class> <class>Foo</class>`
 
-That's it! Now in the __Php Colors__ page you will see your new entry, with the fallback you chose, and optionally the code representing the addition with preview in realtime. Once you click "OK" your PHP code will be annotated with your new colors!
+That's it! Now in the __CakePhp Colors__ page you will see your new entry, with the fallback you chose, and optionally the code representing the addition with preview in realtime. Once you click "OK" your PHP code will be annotated with your new colors!
 
 PS: Be aware that even though your annotators are bundled with your plugin, the languages they extend are plugin-dependant, meaning that your KotlinAnnotator will only work if the Kotlin plugin is installed in your users IDEs.
 
